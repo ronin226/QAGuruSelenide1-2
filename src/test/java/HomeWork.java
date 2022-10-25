@@ -10,7 +10,7 @@ import com.codeborne.selenide.selector.ByText;
 public class HomeWork {
 
     @Test
-    void Hover() {
+    void hover() {
         open("https://github.com/");
         $$("button").findBy(Condition.text("Solutions")).hover();
         $$(".HeaderMenu-dropdown-link").findBy(Condition.text("Enterprise")).click();
@@ -20,7 +20,7 @@ public class HomeWork {
     }
 
     @Test
-    void DragNDrop() {
+    void dragNDrop() {
         open("https://the-internet.herokuapp.com/drag_and_drop");
         actions().moveToElement($("#column-a")).clickAndHold().moveByOffset(250, 0).release().perform();
         $("#column-a").shouldHave(text("B"));
